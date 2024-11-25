@@ -65,6 +65,7 @@ function App() {
 			markdown=""
 			plugins={MOST_PLUGINS}
 			onChange={handleChange}
+			autoFocus={true}
 		/>
 	)
 }
