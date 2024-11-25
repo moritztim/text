@@ -2,7 +2,6 @@ import { MDXEditor } from '@mdxeditor/editor'
 import {
   diffSourcePlugin,
   markdownShortcutPlugin,
-  AdmonitionDirectiveDescriptor,
   directivesPlugin,
   frontmatterPlugin,
   headingsPlugin,
@@ -16,7 +15,6 @@ import {
   toolbarPlugin,
   codeBlockPlugin,
   codeMirrorPlugin,
-  sandpackPlugin,
   KitchenSinkToolbar
 } from '@mdxeditor/editor' // import everything and the kitchen sink
 import '@mdxeditor/editor/style.css'
