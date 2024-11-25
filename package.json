@@ -1,8 +1,8 @@
 {
   "name": "text",
-  "description": "Web-Based Markdown Editor",
+  "description": "Persistent Web-Based Single File Markdown Editor",
   "private": false,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
