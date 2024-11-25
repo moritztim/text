@@ -19,7 +19,6 @@ import {
   sandpackPlugin,
   KitchenSinkToolbar
 } from '@mdxeditor/editor' // import everything and the kitchen sink
-
 import '@mdxeditor/editor/style.css'
 
 // https://github.com/mdx-editor/editor/blob/e8baa67ebc2fda204be0679e77569c79efcba9b2/src/examples/_boilerplate.tsx#L128C8-L148C2
