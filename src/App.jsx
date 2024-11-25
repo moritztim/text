@@ -39,7 +39,10 @@ const MOST_PLUGINS = [
 ]
 
 function App() {
-  return <MDXEditor markdown="" plugins={MOST_PLUGINS} />
+  return <MDXEditor
+    markdown=""
+    plugins={MOST_PLUGINS}
+  />
 }
 
 export default App
