@@ -27,10 +27,7 @@ const MOST_PLUGINS = [
   headingsPlugin({ allowedHeadingLevels: [1, 2, 3] }),
   linkPlugin(),
   linkDialogPlugin(),
-  imagePlugin({
-    imageAutocompleteSuggestions: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'],
-    imageUploadHandler: async () => Promise.resolve('https://picsum.photos/200/300')
-  }),
+  imagePlugin(),
   tablePlugin(),
   thematicBreakPlugin(),
   frontmatterPlugin(),
