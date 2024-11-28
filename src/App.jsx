@@ -39,15 +39,51 @@ const MOST_PLUGINS = [
 	markdownShortcutPlugin()
 ]
 
-/** This function was created by a generative AI. The prompt was based on the state of this function at the previous commit. https://declare-ai.org/1.0.0/total.html */
+/** This function includes creative assistance by a generative AI. https://declare-ai.org/1.0.0/creative.html */
 function App() {
 	const editorRef = useRef(null)
 
 	// Load markdown from localStorage on initial render
 	useEffect(() => {
-		const savedMarkdown = localStorage.getItem('markdown') || ''
+		const savedMarkdown = localStorage.getItem("markdown") || ""
 		if (editorRef.current) {
 			editorRef.current.setMarkdown(savedMarkdown)
+		}
+
+		const handleKeyDown = (e) => {
+			if (e.ctrlKey && e.key === "s") {
+				e.preventDefault()
+
+				if (editorRef.current) {
+					const markdown = editorRef.current.getMarkdown()
+
+					// Create blob and download link
+					const url = URL.createObjectURL(
+						new Blob(
+							[markdown],
+							{ type: "text/markdown" }
+						)
+					)
+					const link = document.createElement("a")
+					link.href = url
+					link.download = "text.md"
+
+					// Trigger download
+					document.body.appendChild(link)
+					link.click()
+
+					// Cleanup
+					document.body.removeChild(link)
+					URL.revokeObjectURL(url)
+				}
+			}
+		}
+
+		document.addEventListener("keydown", handleKeyDown)
+
+		// Cleanup
+		return () => {
+			document.removeEventListener("keydown", handleKeyDown)
 		}
 	}, [])
 
