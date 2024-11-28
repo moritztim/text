@@ -1,26 +1,28 @@
 // Based on https://github.com/mdx-editor/editor/blob/e8baa67ebc2fda204be0679e77569c79efcba9b2/src/plugins/toolbar/components/KitchenSinkToolbar.tsx
-import { AdmonitionKind } from 'lexical'
 import React from 'react'
-import { EditorInFocus } from '../../core'
-import type { DirectiveNode } from '../../directives/DirectiveNode'
-import { ConditionalContents, Separator } from '../primitives/toolbar'
-import { BlockTypeSelect } from './BlockTypeSelect'
-import { BoldItalicUnderlineToggles, StrikeThroughSupSubToggles } from './BoldItalicUnderlineToggles'
-import { ChangeAdmonitionType } from './ChangeAdmonitionType'
-import { ChangeCodeMirrorLanguage } from './ChangeCodeMirrorLanguage'
-import { CodeToggle } from './CodeToggle'
-import { DiffSourceToggleWrapper } from './DiffSourceToggleWrapper'
-import { InsertAdmonition } from './InsertAdmonition'
-import { InsertCodeBlock } from './InsertCodeBlock'
-import { InsertFrontmatter } from './InsertFrontmatter'
-import { InsertImage } from './InsertImage'
-import { InsertSandpack } from './InsertSandpack'
-import { InsertTable } from './InsertTable'
-import { InsertThematicBreak } from './InsertThematicBreak'
-import { ListsToggle } from './ListsToggle'
-import { ShowSandpackInfo } from './ShowSandpackInfo'
-import { UndoRedo } from './UndoRedo'
-import { CreateLink } from './CreateLink'
+import { AdmonitionKind } from 'lexical'
+import type { DirectiveNode } from '@mdxeditor/editor'
+import {
+	EditorInFocus,
+	ConditionalContents, Separator,
+	BlockTypeSelect,
+	BoldItalicUnderlineToggles, StrikeThroughSupSubToggles,
+	ChangeAdmonitionType,
+	ChangeCodeMirrorLanguage,
+	CodeToggle,
+	DiffSourceToggleWrapper,
+	InsertAdmonition,
+	InsertCodeBlock,
+	InsertFrontmatter,
+	InsertImage,
+	InsertSandpack,
+	InsertTable,
+	InsertThematicBreak,
+	ListsToggle,
+	ShowSandpackInfo,
+	UndoRedo,
+	CreateLink,
+} from '@mdxeditor/editor'
 
 function whenInAdmonition(editorInFocus: EditorInFocus | null) {
   const node = editorInFocus?.rootNode
