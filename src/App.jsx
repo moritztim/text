@@ -1,5 +1,5 @@
-import { MDXEditor } from '@mdxeditor/editor'
 import {
+	MDXEditor,
 	diffSourcePlugin,
 	markdownShortcutPlugin,
 	directivesPlugin,
@@ -18,7 +18,7 @@ import {
 	KitchenSinkToolbar
 } from '@mdxeditor/editor' // import everything and the kitchen sink
 import '@mdxeditor/editor/style.css'
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 // https://github.com/mdx-editor/editor/blob/e8baa67ebc2fda204be0679e77569c79efcba9b2/src/examples/_boilerplate.tsx#L128C8-L148C2
 const MOST_PLUGINS = [
