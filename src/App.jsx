@@ -32,7 +32,7 @@ const MOST_PLUGINS = [
 	tablePlugin(),
 	thematicBreakPlugin(),
 	frontmatterPlugin(),
-	codeBlockPlugin({ defaultCodeBlockLanguage: '' }),
+	codeBlockPlugin(),
 	codeMirrorPlugin(),
 	directivesPlugin(),
 	diffSourcePlugin({ viewMode: 'rich-text' }),
