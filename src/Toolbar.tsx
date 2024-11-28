@@ -39,7 +39,7 @@ function whenInAdmonition(editorInFocus: EditorInFocus | null) {
  * You'll probably want to create your own toolbar component that includes only the buttons that you need.
  * @group Toolbar Components
  */
-export const KitchenSinkToolbar: React.FC = () => {
+export const Toolbar: React.FC = () => {
   return (
     <DiffSourceToggleWrapper>
       <ConditionalContents
