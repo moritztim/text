@@ -41,7 +41,9 @@ function whenInAdmonition(editorInFocus: EditorInFocus | null) {
  */
 export const Toolbar: React.FC = () => {
   return (
-    <DiffSourceToggleWrapper>
+	  <DiffSourceToggleWrapper
+	  	options={["rich-text", "source"]}
+	  >
       <ConditionalContents
         options={[
           { when: (editor) => editor?.editorType === 'codeblock', contents: () => <ChangeCodeMirrorLanguage /> },

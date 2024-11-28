@@ -35,7 +35,7 @@ const MOST_PLUGINS = [
 	codeBlockPlugin({ defaultCodeBlockLanguage: '' }),
 	codeMirrorPlugin(),
 	directivesPlugin(),
-	diffSourcePlugin({ viewMode: 'rich-text', diffMarkdown: 'boo' }),
+	diffSourcePlugin({ viewMode: 'rich-text' }),
 	markdownShortcutPlugin()
 ]
 
