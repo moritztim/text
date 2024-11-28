@@ -15,11 +15,9 @@ import {
 	InsertCodeBlock,
 	InsertFrontmatter,
 	InsertImage,
-	InsertSandpack,
 	InsertTable,
 	InsertThematicBreak,
 	ListsToggle,
-	ShowSandpackInfo,
 	UndoRedo,
 	CreateLink,
 } from '@mdxeditor/editor'
@@ -47,7 +45,6 @@ export const Toolbar: React.FC = () => {
       <ConditionalContents
         options={[
           { when: (editor) => editor?.editorType === 'codeblock', contents: () => <ChangeCodeMirrorLanguage /> },
-          { when: (editor) => editor?.editorType === 'sandpack', contents: () => <ShowSandpackInfo /> },
           {
             fallback: () => (
               <>
@@ -77,7 +74,6 @@ export const Toolbar: React.FC = () => {
 
                 <Separator />
                 <InsertCodeBlock />
-                <InsertSandpack />
 
                 <ConditionalContents
                   options={[
